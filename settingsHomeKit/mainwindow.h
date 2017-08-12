@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QString>
 #include <qextserialport.h>
-
+#include <QFile>
 
 namespace Ui {
 class MainWindow;
@@ -28,7 +28,10 @@ private slots:
     void on_pushButton_send_clicked();
 
     void showTime();
+
     void timeEvent();
+
+    void onDatosRecibidos();
 
 private:
     Ui::MainWindow *ui;
@@ -38,6 +41,9 @@ int m_cant_bytes_recibidos;
 char * rx_data;
  QString buffer;
  //void EnviarComando_rs232(QString com);
+
+ QFile file;
+  bool  stat;
 
 };
 
