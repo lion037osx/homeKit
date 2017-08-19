@@ -4,13 +4,13 @@ init:
 	git init
 	git add README.md
 	git commit -m "first commit"
-	git remote add origin https://github.com/lion037osx/homeKit.git
+	git remote add origin https://github.com/lion037osx/qtHomeKit.git
 	git push -u origin master
 
 
 existing:
 
-	git remote add origin https://github.com/lion037osx/homeKit.git
+	git remote add origin https://github.com/lion037osx/qtHomeKit.git
 	git push -u origin master
 
 clean:
@@ -25,11 +25,11 @@ help:
 	@+echo "*********************************Help GIT******************************************"
 	@+echo ""
 	@+echo "make clone"
-	@+echo "		git clone https://github.com/lion037osx/homeKit.git"
+	@+echo "		git clone https://github.com/lion037osx/qtHomeKit.git"
 	@+echo "make push"
-	@+echo "		git push https://github.com/lion037osx/homeKit.git"
+	@+echo "		git push https://github.com/lion037osx/qtHomeKit.git"
 	@+echo "make pull"
-	@+echo "		git pull https://github.com/lion037osx/homeKit.git"
+	@+echo "		git pull https://github.com/lion037osx/qtHomeKit.git"
 	@+echo "make commit"
 	@+echo "		git commit -m \"update\""
 	@+echo "make add"
@@ -45,20 +45,20 @@ help:
 
 clone:
 
-	git clone https://github.com/lion037osx/homeKit.git
+	git clone https://github.com/lion037osx/qtHomeKit.git
 
 
 push:
 	git add.
 	git commit -m "update push"
 #	git push origin master 
-	git push https://github.com/lion037osx/homeKit.git
+	git push https://github.com/lion037osx/qtHomeKit.git
 
 pull:
 	git add .
 	git commit -m "upgrade pull"
 #	git pull origin master
-	git pull git push https://github.com/lion037osx/homeKit.git
+	git pull git push https://github.com/lion037osx/qtHomeKit.git
 
 update:
 	git add .
