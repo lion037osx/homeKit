@@ -60,7 +60,7 @@ pull:
 #	git pull origin master
 	git pull git push https://github.com/lion037osx/qtHomeKit.git
 
-update:
+upgrade:
 	git add .
 	git commit -m "push origin master"
 	git push origin master
