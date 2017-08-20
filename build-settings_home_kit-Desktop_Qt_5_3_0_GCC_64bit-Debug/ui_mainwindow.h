@@ -1,8 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Fri Aug 11 21:33:16 2017
-**      by: Qt User Interface Compiler version 4.8.1
+** Created by: Qt User Interface Compiler version 5.3.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -11,17 +10,17 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QMainWindow>
-#include <QtGui/QMenuBar>
-#include <QtGui/QPushButton>
-#include <QtGui/QStatusBar>
-#include <QtGui/QToolBar>
-#include <QtGui/QWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QStatusBar>
+#include <QtWidgets/QToolBar>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -42,31 +41,31 @@ public:
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
+            MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->resize(683, 407);
         centralWidget = new QWidget(MainWindow);
-        centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
+        centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pushButton_exit = new QPushButton(centralWidget);
-        pushButton_exit->setObjectName(QString::fromUtf8("pushButton_exit"));
+        pushButton_exit->setObjectName(QStringLiteral("pushButton_exit"));
         pushButton_exit->setGeometry(QRect(590, 290, 61, 61));
         pushButton_connex_to_uart = new QPushButton(centralWidget);
-        pushButton_connex_to_uart->setObjectName(QString::fromUtf8("pushButton_connex_to_uart"));
+        pushButton_connex_to_uart->setObjectName(QStringLiteral("pushButton_connex_to_uart"));
         pushButton_connex_to_uart->setGeometry(QRect(10, 290, 101, 61));
         pushButton_send = new QPushButton(centralWidget);
-        pushButton_send->setObjectName(QString::fromUtf8("pushButton_send"));
+        pushButton_send->setObjectName(QStringLiteral("pushButton_send"));
         pushButton_send->setGeometry(QRect(300, 290, 101, 61));
         label_view_time = new QLabel(centralWidget);
-        label_view_time->setObjectName(QString::fromUtf8("label_view_time"));
+        label_view_time->setObjectName(QStringLiteral("label_view_time"));
         label_view_time->setGeometry(QRect(10, 10, 301, 31));
         QFont font;
         font.setPointSize(10);
         label_view_time->setFont(font);
         label_background = new QLabel(centralWidget);
-        label_background->setObjectName(QString::fromUtf8("label_background"));
+        label_background->setObjectName(QStringLiteral("label_background"));
         label_background->setGeometry(QRect(0, -20, 681, 391));
         label_background->setFont(font);
         label_get_clock = new QLabel(centralWidget);
-        label_get_clock->setObjectName(QString::fromUtf8("label_get_clock"));
+        label_get_clock->setObjectName(QStringLiteral("label_get_clock"));
         label_get_clock->setGeometry(QRect(10, 60, 301, 31));
         MainWindow->setCentralWidget(centralWidget);
         label_background->raise();
@@ -76,14 +75,14 @@ public:
         pushButton_connex_to_uart->raise();
         label_get_clock->raise();
         menuBar = new QMenuBar(MainWindow);
-        menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 683, 22));
+        menuBar->setObjectName(QStringLiteral("menuBar"));
+        menuBar->setGeometry(QRect(0, 0, 683, 19));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
-        mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
+        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
         MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(MainWindow);
-        statusBar->setObjectName(QString::fromUtf8("statusBar"));
+        statusBar->setObjectName(QStringLiteral("statusBar"));
         MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
@@ -93,10 +92,10 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Smart Home Kit", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Smart Home Kit", 0));
         pushButton_exit->setText(QString());
-        pushButton_connex_to_uart->setText(QApplication::translate("MainWindow", "connect", 0, QApplication::UnicodeUTF8));
-        pushButton_send->setText(QApplication::translate("MainWindow", "Update", 0, QApplication::UnicodeUTF8));
+        pushButton_connex_to_uart->setText(QApplication::translate("MainWindow", "Connect", 0));
+        pushButton_send->setText(QApplication::translate("MainWindow", "Update", 0));
         label_view_time->setText(QString());
         label_background->setText(QString());
         label_get_clock->setText(QString());

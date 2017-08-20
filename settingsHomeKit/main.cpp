@@ -17,12 +17,12 @@ int main(int argc, char *argv[])
 
     #ifdef Q_OS_LINUX
     qDebug()<<"LINUX OS";
-    splash->setPixmap(QPixmap("/home/optimus/Documentos/source_code/qt/qt_homeKit/homeKit/settingsHomeKit/png/animal.png"));
+    splash->setPixmap(QPixmap(qApp->applicationDirPath() + "/../settingsHomeKit/png/animal.png"));
     #endif
 
     #ifdef Q_OS_MACOS
     qDebug()<<"MAC OS";
-    splash->setPixmap(QPixmap("/home/optimus/Documentos/source_code/qt/qt_homeKit/homeKit/settingsHomeKit/png/animal.png"));
+    splash->setPixmap(QPixmap(qApp->applicationDirPath() + "/../settingsHomeKit/png/animal.png"));
     #endif
 
     splash->setWindowOpacity(0.95);
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
     MainWindow w;
 
-    QIcon icon("/home/optimus/Documentos/source_code/qt/qt_homeKit/homeKit/settingsHomeKit/png/icon.png");
+    QIcon icon(qApp->applicationDirPath() + "/../settingsHomeKit/png/icon.png");
 
     w.setWindowIcon(icon);
     w.move(QApplication::desktop()->screen()->rect().center() - w.rect().center());

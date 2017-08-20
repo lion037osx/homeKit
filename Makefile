@@ -62,7 +62,7 @@ pull:
 
 upgrade:
 	git add .
-	git commit -m "push origin master"
+	git commit -m " upgrade ush origin master"
 	git push origin master
 
 update:

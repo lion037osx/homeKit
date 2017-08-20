@@ -7,6 +7,7 @@
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+#greaterThan(QT_MAJOR_VERSION, 5): QT += widgets
 
 TARGET = settings_home_kit
 TEMPLATE = app
@@ -21,3 +22,11 @@ FORMS    += mainwindow.ui
 
 
 include ("/home/optimus/Documentos/source_code/qt/qt_libs/qextserialport-1.2rc/src/qextserialport.pri")
+
+
+#error:
+#/usr/bin/ld: cannot find -lGL
+#
+#solved:
+#apt-get install qtbase5-dev
+#

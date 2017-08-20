@@ -16,15 +16,31 @@ QMainWindow(parent),
 ui(new Ui::MainWindow),port(NULL)
 {
     ui->setupUi(this);
+
+    QString linkBackGround;
+#ifdef Q_OS_LINUX
+    linkBackGround = qApp->applicationDirPath() + "/../settingsHomeKit/png/bg_cool.png";
+#endif
+
+#ifdef Q_OS_MACOS
+    linkBackGround = qApp->applicationDirPath() + "/../settingsHomeKit/png/bg_cool.png";
+#endif
+//    qDebug()<<linkBackGround;
+//    qDebug()<<qApp->applicationDirPath();
     QDateTime systemTime;
     systemTime=QDateTime::currentDateTime();
-QString txtSystemTime;
-txtSystemTime=systemTime.toString();
 
-QPixmap pixmap("/home/optimus/Documentos/source_code/qt/qt_homeKit/homeKit/settingsHomeKit/png/bg_cool.png");
+    QString txtSystemTime;
+    txtSystemTime=systemTime.toString();
+
+
+
+QPixmap pixmap(linkBackGround);
+
 ui->label_background->setPixmap(pixmap);
 
     ui->label_view_time->setText(txtSystemTime);
+
     qDebug()<<"string:"<<txtSystemTime;
     qDebug()<<systemTime;
 
@@ -34,11 +50,20 @@ ui->label_background->setPixmap(pixmap);
 
     timeEvent();
 
-    QIcon icon=QIcon("/home/optimus/Documentos/source_code/qt/qt_homeKit/homeKit/settingsHomeKit/png/exit.png");
+    QString linkIcon;
+
+    linkIcon = qApp->applicationDirPath() + "/../settingsHomeKit/png/exit.png";
+
+    QIcon icon=QIcon(linkIcon);
 
      ui->pushButton_exit->setIcon(icon);
 
-      icon=QIcon("/home/optimus/Documentos/source_code/qt/qt_homeKit/homeKit/settingsHomeKit/png/usb.png");
+
+     linkIcon = qApp->applicationDirPath() + "/../settingsHomeKit/png/usb.png";
+
+
+      icon=QIcon(linkIcon);
+
 
       ui->pushButton_connex_to_uart->setIcon(icon);
 }

@@ -37,7 +37,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>connect</string>
+     <string>Connect</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_send">
@@ -115,7 +115,7 @@
      <x>0</x>
      <y>0</y>
      <width>683</width>
-     <height>22</height>
+     <height>19</height>
     </rect>
    </property>
   </widget>
