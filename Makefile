@@ -65,6 +65,8 @@ upgrade:
 	git commit -m "push origin master"
 	git push origin master
 
+update:
+	git pull --all
 
 
 
