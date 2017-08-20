@@ -68,8 +68,12 @@ void MainWindow::on_pushButton_connex_to_uart_clicked()
            port->setDataBits(DATA_8);
            port->setStopBits(STOP_1);
 
-            //m_port->setPortName("/dev/cu.SLAB_USBtoUART");
-           port->setPortName("/dev/ttyUSB0");
+            #ifdef Q_OS_MACOS
+                m_port->setPortName("/dev/cu.SLAB_USBtoUART");
+            #endif
+           #ifdef Q_OS_LINUX
+                port->setPortName("/dev/ttyUSB0");
+            #endif
 
            if(port->open(QIODevice::ReadWrite)==true)
            {
